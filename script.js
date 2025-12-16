@@ -84,8 +84,10 @@ document.querySelector('.see-more-btn').addEventListener('click', function() {
 // Read More buttons for projects
 document.querySelectorAll('.read-more-btn').forEach(btn => {
     btn.addEventListener('click', function() {
-        const projectTitle = this.parentElement.querySelector('.portfolio-title').textContent;
-        alert(`More details about "${projectTitle}" coming soon!`);
+        const url = this.getAttribute('data-url');
+        if (url) {
+            window.open(url, '_blank'); // open in new tab
+        }
     });
 });
 
