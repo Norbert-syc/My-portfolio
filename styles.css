@@ -1510,6 +1510,94 @@ body::after {
   transform: translateY(-2px);
 }
 
+/* Testimonials Section */
+.testimonials-section {
+  padding: 6rem 2rem;
+  background-color: #1a1a1a;
+  text-align: center;
+}
+
+.testimonials-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonials-title {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  color: #ffffff;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.testimonial-card {
+  background: linear-gradient(145deg, #2a2a2a, #222222);
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: left;
+  border: 1px solid #333;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(0, 212, 255, 0.4);
+  box-shadow: 0 15px 40px rgba(0, 212, 255, 0.15);
+}
+
+.testimonial-quote {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 2rem;
+  color: rgba(0, 212, 255, 0.2);
+}
+
+.testimonial-text {
+  color: #cccccc;
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.author-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #00d4ff, #0099cc);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.author-avatar i {
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+.author-info h4 {
+  color: #ffffff;
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.author-info span {
+  color: #00d4ff;
+  font-size: 0.85rem;
+}
+
 /* Contact Section */
 .contact-section {
   padding: 5rem 2rem;
@@ -1531,7 +1619,7 @@ body::after {
 .contact-info {
   display: flex;
   justify-content: center;
-  gap: 3rem;
+  gap: 2rem;
   margin-bottom: 3rem;
   flex-wrap: wrap;
 }
@@ -1545,6 +1633,7 @@ body::after {
   border-radius: 12px;
   border: 1px solid #333;
   transition: all 0.3s ease;
+  white-space: nowrap;
 }
 
 .contact-info-item:hover {
@@ -1806,6 +1895,14 @@ body::after {
   }
 
   .blog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonials-title {
+    font-size: 2rem;
+  }
+
+  .testimonials-grid {
     grid-template-columns: 1fr;
   }
 
