@@ -143,46 +143,60 @@ if (modal) {
 
 // Codes button
 document.querySelector(".codes-btn").addEventListener("click", function () {
-  window.open("https://github.com/Norbert-syc", "_blank");
+  window.open("https://github.com", "_blank");
 });
 
-// Contact form submission with Formspree
-const contactForm = document.querySelector(".contact-form");
+// Contact form submission - Show 3D animated popup with contact info
+const contactForm = document.getElementById("contactForm");
+const contactPopup = document.getElementById("contactPopup");
+const popupCloseBtn = document.getElementById("popupCloseBtn");
+
 if (contactForm) {
-  contactForm.addEventListener("submit", async function (e) {
+  contactForm.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    const formData = new FormData(this);
-    const submitBtn = this.querySelector(".send-btn");
-    const originalText = submitBtn.textContent;
+    // Show the 3D animated popup
+    if (contactPopup) {
+      contactPopup.classList.add("active");
+      document.body.style.overflow = "hidden";
+    }
 
-    try {
-      submitBtn.textContent = "Sending...";
-      submitBtn.disabled = true;
+    // Reset the form
+    contactForm.reset();
+  });
+}
 
-      // Replace YOUR_FORM_ID with your actual Formspree form ID
-      const response = await fetch("https://formspree.io/f/YOUR_FORM_ID", {
-        method: "POST",
-        body: formData,
-        headers: {
-          Accept: "application/json",
-        },
-      });
-
-      if (response.ok) {
-        alert("Thank you for your message! I will get back to you soon.");
-        this.reset();
-      } else {
-        alert("There was an error. Please try again or email me directly.");
-      }
-    } catch (error) {
-      alert("There was an error. Please try again or email me directly.");
-    } finally {
-      submitBtn.textContent = originalText;
-      submitBtn.disabled = false;
+// Close popup when clicking close button
+if (popupCloseBtn) {
+  popupCloseBtn.addEventListener("click", function () {
+    if (contactPopup) {
+      contactPopup.classList.remove("active");
+      document.body.style.overflow = "";
     }
   });
 }
+
+// Close popup when clicking outside
+if (contactPopup) {
+  contactPopup.addEventListener("click", function (e) {
+    if (e.target === contactPopup) {
+      contactPopup.classList.remove("active");
+      document.body.style.overflow = "";
+    }
+  });
+}
+
+// Close popup with Escape key
+document.addEventListener("keydown", function (e) {
+  if (
+    e.key === "Escape" &&
+    contactPopup &&
+    contactPopup.classList.contains("active")
+  ) {
+    contactPopup.classList.remove("active");
+    document.body.style.overflow = "";
+  }
+});
 
 // Social media links
 document.addEventListener("DOMContentLoaded", function () {

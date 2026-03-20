@@ -609,11 +609,7 @@
             </div>
           </div>
 
-          <form
-            class="contact-form"
-            action="https://formspree.io/f/YOUR_FORM_ID"
-            method="POST"
-          >
+          <form class="contact-form" id="contactForm">
             <div class="form-row">
               <input
                 type="text"
@@ -677,6 +673,47 @@
         <div class="modal-footer">
           <span class="coming-soon">🚀 Coming Soon</span>
         </div>
+      </div>
+    </div>
+
+    <!-- 3D Animated Contact Popup -->
+    <div class="contact-popup-overlay" id="contactPopup">
+      <div class="contact-popup">
+        <div class="popup-particles">
+          <div class="particle particle-1"></div>
+          <div class="particle particle-2"></div>
+          <div class="particle particle-3"></div>
+          <div class="particle particle-4"></div>
+          <div class="particle particle-5"></div>
+        </div>
+        <div class="popup-ring"></div>
+        <div class="popup-ring ring-2"></div>
+        <div class="popup-icon-wrapper">
+          <div class="popup-icon-inner">
+            <i class="fas fa-envelope"></i>
+          </div>
+        </div>
+        <h2 class="contact-popup-title">Thank You!</h2>
+        <p class="contact-popup-text">
+          For now, please contact me directly with:
+        </p>
+        <div class="contact-popup-divider"></div>
+        <div class="contact-popup-options">
+          <a
+            href="mailto:nabahirenorbert@gmail.com"
+            class="contact-option email-option"
+          >
+            <div class="option-icon">
+              <i class="fas fa-envelope-open-text"></i>
+            </div>
+            <span>norbertnabahire@gmail.com</span>
+          </a>
+          <a href="tel:+256784685309" class="contact-option phone-option">
+            <div class="option-icon"><i class="fas fa-phone-alt"></i></div>
+            <span>+250 789 309 376</span>
+          </a>
+        </div>
+        <button class="contact-popup-close" id="popupCloseBtn">Got it!</button>
       </div>
     </div>
 
