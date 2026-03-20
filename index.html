@@ -16,13 +16,18 @@
     <header>
       <nav class="navbar">
         <div class="logo">Norbs</div>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
         <ul class="nav-menu">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
-          <li><a href="#blog">Blog</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+          <li><a href="#blog" class="nav-link">Blog</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -179,14 +184,14 @@
                   <div class="skill-icon"><i class="fab fa-react"></i></div>
                   <span class="skill-name">React</span>
                   <div class="skill-bar">
-                    <div class="skill-progress" style="width: 75%"></div>
+                    <div class="skill-progress" style="width: 90%"></div>
                   </div>
                 </div>
                 <div class="skill-card">
                   <div class="skill-icon"><span class="ts-icon">TS</span></div>
                   <span class="skill-name">TypeScript</span>
                   <div class="skill-bar">
-                    <div class="skill-progress" style="width: 70%"></div>
+                    <div class="skill-progress" style="width: 85%"></div>
                   </div>
                 </div>
               </div>
@@ -211,14 +216,14 @@
                   </div>
                   <span class="skill-name">MongoDB</span>
                   <div class="skill-bar">
-                    <div class="skill-progress" style="width: 70%"></div>
+                    <div class="skill-progress" style="width: 88%"></div>
                   </div>
                 </div>
                 <div class="skill-card">
                   <div class="skill-icon"><i class="fas fa-code"></i></div>
                   <span class="skill-name">Node.js</span>
                   <div class="skill-bar">
-                    <div class="skill-progress" style="width: 65%"></div>
+                    <div class="skill-progress" style="width: 85%"></div>
                   </div>
                 </div>
               </div>
@@ -384,7 +389,7 @@
                 <span class="tech-badge">Node.js</span>
                 <span class="tech-badge">PostgreSQL</span>
                 <span class="tech-badge">Tailwind</span>
-                <span class="tech-badge">Express</span> 
+                <span class="tech-badge">Express</span>
               </div>
               <button
                 class="read-more-btn project-btn"
@@ -512,17 +517,20 @@
       <!-- Testimonials Section -->
       <section id="testimonials" class="testimonials-section">
         <div class="testimonials-content">
-          <h2 class="testimonials-title">What People <span class="highlight">Say</span></h2>
-          
+          <h2 class="testimonials-title">
+            What People <span class="highlight">Say</span>
+          </h2>
+
           <div class="testimonials-grid">
             <div class="testimonial-card">
               <div class="testimonial-quote">
                 <i class="fas fa-quote-left"></i>
               </div>
               <p class="testimonial-text">
-                Norbert is an exceptional developer who consistently delivers high-quality work. 
-                His attention to detail and ability to transform ideas into functional applications 
-                is remarkable. He completed our e-commerce project ahead of schedule!
+                Norbert is an exceptional developer who consistently delivers
+                high-quality work. His attention to detail and ability to
+                transform ideas into functional applications is remarkable. He
+                completed our e-commerce project ahead of schedule!
               </p>
               <div class="testimonial-author">
                 <div class="author-avatar">
@@ -540,16 +548,17 @@
                 <i class="fas fa-quote-left"></i>
               </div>
               <p class="testimonial-text">
-                Working with Norbert was a great experience. He understood our requirements 
-                perfectly and built a fitness tracking app that exceeded our expectations. 
-                His communication skills and technical expertise are top-notch.
+                Working with Norbert was a great experience. He understood our
+                requirements perfectly and built a fitness tracking app that
+                exceeded our expectations. His communication skills and
+                technical expertise are top-notch.
               </p>
               <div class="testimonial-author">
                 <div class="author-avatar">
                   <i class="fas fa-user"></i>
                 </div>
                 <div class="author-info">
-                  <h4>  Mr Philbert</h4>
+                  <h4>Mr Philbert</h4>
                   <span>CEO, Centerpiece group</span>
                 </div>
               </div>
@@ -560,9 +569,10 @@
                 <i class="fas fa-quote-left"></i>
               </div>
               <p class="testimonial-text">
-                Norbert transformed our event management system completely. The new platform 
-                is fast, intuitive, and has significantly improved our operations. Highly 
-                recommended for any web development project!
+                Norbert transformed our event management system completely. The
+                new platform is fast, intuitive, and has significantly improved
+                our operations. Highly recommended for any web development
+                project!
               </p>
               <div class="testimonial-author">
                 <div class="author-avatar">
@@ -669,6 +679,60 @@
         </div>
       </div>
     </div>
+
+    <!-- 3D Animated Footer -->
+    <footer class="footer">
+      <div class="footer-3d">
+        <div class="footer-orb footer-orb-1"></div>
+        <div class="footer-orb footer-orb-2"></div>
+        <div class="footer-orb footer-orb-3"></div>
+      </div>
+      <div class="footer-content">
+        <div class="footer-logo">Norbs</div>
+        <p class="footer-tagline">
+          Building the future, one line of code at a time.
+        </p>
+        <div class="footer-social">
+          <a
+            href="https://www.instagram.com/___norbs/"
+            target="_blank"
+            class="footer-social-icon"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/norbert-nabahire-930a51260/"
+            target="_blank"
+            class="footer-social-icon"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a
+            href="https://twitter.com/norbertnabahire"
+            target="_blank"
+            class="footer-social-icon"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a
+            href="https://www.facebook.com/nabahire.norbert"
+            target="_blank"
+            class="footer-social-icon"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a
+            href="https://github.com/Norbert-syc"
+            target="_blank"
+            class="footer-social-icon"
+            ><i class="fab fa-github"></i
+          ></a>
+        </div>
+        <p class="footer-copyright">
+          &copy; 2025 Norbert NABAHIRE. All rights reserved.
+        </p>
+        <p class="footer-made">
+          Made with <span class="heart">❤</span> and lots of
+          <span class="coffee">☕</span>
+        </p>
+      </div>
+    </footer>
 
     <script src="script.js"></script>
   </body>

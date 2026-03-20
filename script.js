@@ -143,7 +143,7 @@ if (modal) {
 
 // Codes button
 document.querySelector(".codes-btn").addEventListener("click", function () {
-  window.open("https://github.com", "_blank");
+  window.open("https://github.com/Norbert-syc", "_blank");
 });
 
 // Contact form submission with Formspree
@@ -200,4 +200,34 @@ document.addEventListener("DOMContentLoaded", function () {
       window.open(socialLinks[index], "_blank");
     });
   });
+});
+
+// Mobile menu hamburger toggle
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.querySelector(".hamburger");
+  const navMenu = document.querySelector(".nav-menu");
+  const navLinks = document.querySelectorAll(".nav-link");
+
+  if (hamburger && navMenu) {
+    hamburger.addEventListener("click", function () {
+      hamburger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    });
+
+    // Close menu when a nav link is clicked
+    navLinks.forEach((link) => {
+      link.addEventListener("click", function () {
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("active");
+      });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener("click", function (e) {
+      if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("active");
+      }
+    });
+  }
 });
